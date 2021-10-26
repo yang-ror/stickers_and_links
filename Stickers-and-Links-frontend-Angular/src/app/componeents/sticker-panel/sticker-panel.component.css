@@ -1,0 +1,30 @@
+.note-input{
+    resize: none;
+    border: none;
+    height: 200px;
+    width: 278px;
+    font-size: 1.4em;
+    background: transparent;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+/* .note-input:focus {
+    outline: 0;
+} */
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #d1d1d1; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}

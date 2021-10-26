@@ -40,7 +40,7 @@ public class NoteController {
     }
 
     @PutMapping(path = "/{noteId}")
-    public Note updateNote(@PathVariable("linkId") int noteId, @RequestBody Note note){
+    public Note updateNote(@PathVariable("noteId") int noteId, @RequestBody Note note){
         noteService.updateNote(noteId, note);
         return note;
     }

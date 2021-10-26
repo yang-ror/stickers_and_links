@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 import { Note } from '../../Note'
 
 @Component({
@@ -10,6 +10,7 @@ export class NoteItemComponent implements OnInit {
   @Input() note!: Note
   @Output() onDeleteNote: EventEmitter<Note> = new EventEmitter()
   @Output() onSubmitNote: EventEmitter<Note> = new EventEmitter()
+  // @ViewChild('input') inputField!: ElementRef;
 
   editingState: boolean = false
   noteContent: string = ""
@@ -21,6 +22,8 @@ export class NoteItemComponent implements OnInit {
   }
 
   onEdit(){
+    // this.inputField.nativeElement.focus();
+    this.noteContent = this.note.content
     this.editingState = true
   }
 

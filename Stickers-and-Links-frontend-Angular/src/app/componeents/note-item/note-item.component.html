@@ -6,8 +6,8 @@
     'note-color-purple' : note.color=='purple'
 }">
     <div class = 'note-content-div'>
-        <p *ngIf="!editingState" class='note-content'>{{note.content}}</p>
-        <textarea *ngIf="editingState" class="note-edit-field" [(ngModel)]="noteContent"></textarea>
+        <pre *ngIf="!editingState" class='note-content'>{{note.content}}</pre>
+        <textarea autofocus *ngIf="editingState" class="note-edit-field" [(ngModel)]="noteContent"></textarea>
     </div>
     <div class = 'note-btn-holder'>
         <app-note-btn *ngIf="!editingState" action="edit" (click)="onEdit()"></app-note-btn>

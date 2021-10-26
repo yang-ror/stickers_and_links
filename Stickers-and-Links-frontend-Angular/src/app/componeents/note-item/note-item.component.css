@@ -3,7 +3,37 @@
     border: none;
     height: 200px;
     width: 278px;
-    font-size: 1.2em;
+    font-size: 1.4em;
     background: transparent;
     margin-top: 10px;
+}
+
+.note-content{
+    white-space: pre-wrap;
+    font-size: 1.4em;
+    width: 280px;
+    height: 200px;
+    overflow-y: auto;
+    /* transform: translate(5, -8px); */
+}
+
+/* .note-edit-field:focus {
+    outline: 0;
+} */
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #d1d1d1; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
 }

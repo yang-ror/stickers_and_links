@@ -1,0 +1,18 @@
+<div class = 'existed-note stickers' [ngClass]="{
+    'note-color-red' : note.color=='red',
+    'note-color-green' : note.color=='green',
+    'note-color-blue' : note.color=='blue',
+    'note-color-yellow' : note.color=='yellow',
+    'note-color-purple' : note.color=='purple'
+}">
+    <div class = 'note-content-div'>
+        <p *ngIf="!editingState" class='note-content'>{{note.content}}</p>
+        <textarea *ngIf="editingState" class="note-edit-field" [(ngModel)]="noteContent"></textarea>
+    </div>
+    <div class = 'note-btn-holder'>
+        <app-note-btn *ngIf="!editingState" action="edit" (click)="onEdit()"></app-note-btn>
+        <app-note-btn *ngIf="!editingState" action="delete" (click)="onDelete()"></app-note-btn>
+        <app-note-btn *ngIf="editingState" action="submit" (click)="onSubmit()"></app-note-btn>
+        <app-note-btn *ngIf="editingState" action="cancel" (click)="onCancel()"></app-note-btn>
+    </div>
+</div>

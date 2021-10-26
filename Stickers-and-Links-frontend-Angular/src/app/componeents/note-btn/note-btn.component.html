@@ -1,0 +1,11 @@
+<button class='note-btns apply-shadow'[ngClass]="{
+    'edit-note-btns': action == 'edit',
+    'save-note-btns': action == 'submit',
+    'cancel-note-btns': action == 'cancel',
+    'delete-note-btns': action == 'delete'
+}">
+    <fa-icon *ngIf="action == 'edit'" [icon]="faEdit"></fa-icon>
+    <fa-icon *ngIf="action == 'delete'" [icon]="faTimesCircle"></fa-icon>
+    <fa-icon *ngIf="action == 'submit'" [icon]="faCheckCircle"></fa-icon>
+    <fa-icon *ngIf="action == 'cancel'" [icon]="faBan"></fa-icon>
+</button>

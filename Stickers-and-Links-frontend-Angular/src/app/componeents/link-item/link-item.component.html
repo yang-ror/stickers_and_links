@@ -1,0 +1,13 @@
+<div class='existed-links links'>
+    <div class='link-content-div'>
+        <a *ngIf="!editingState" class='link-label' target="_blank" href = '{{link.url}}'>{{link.title}}</a>
+        <input *ngIf="editingState" class="link-editing-input"  [(ngModel)]="linkTitle" name='link-editing-input' #linkInput >
+        <div class='link-btn-holder'>
+            <app-link-btn *ngIf="!editingState" position="upper" action="edit" (click)="onEdit()"></app-link-btn>
+            <app-link-btn *ngIf="!editingState" position="lower" action="delete" (click)="onDelete()"></app-link-btn>
+            <app-link-btn *ngIf="editingState" position="upper" action="submit" (click)="onSubmit()"></app-link-btn>
+            <app-link-btn *ngIf="editingState" position="lower" action="cancel" (click)="onCancel()"></app-link-btn>
+        </div>
+        
+    </div>
+</div>

@@ -1,0 +1,14 @@
+<div>
+    <div class="add-form">
+        <div class="input-holder">
+            <input type="text" class="link-input" name="link-input" placeholder="New link" [(ngModel)]="newLink">
+        </div>
+        <div class="add-link-btn-holder">
+            <button (click)="addLink()" class="add-link-btn">+</button>
+        </div>
+    </div>
+    <app-link-item *ngFor="let link of links" [link]="link" 
+    (onDeleteLink)="deleteLink(link)"
+    (onSubmitLink)="updateLink($event)"
+    ></app-link-item>
+</div>

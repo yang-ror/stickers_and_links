@@ -1,0 +1,9 @@
+.note-edit-field{
+    resize: none;
+    border: none;
+    height: 200px;
+    width: 278px;
+    font-size: 1.2em;
+    background: transparent;
+    margin-top: 10px;
+}

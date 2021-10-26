@@ -1,0 +1,8 @@
+<div [ngClass]="{'upper-link-btns-holder': position=='upper', 'lower-link-btns-holder': position=='lower'}" class="sub-link-btns-holder">
+    <button class = 'link-btns'>
+        <fa-icon *ngIf="action == 'edit'" [icon]="faEdit"></fa-icon>
+        <fa-icon *ngIf="action == 'delete'" [icon]="faTimesCircle"></fa-icon>
+        <fa-icon *ngIf="action == 'submit'" [icon]="faCheckCircle"></fa-icon>
+        <fa-icon *ngIf="action == 'cancel'" [icon]="faBan"></fa-icon>
+    </button>
+</div>

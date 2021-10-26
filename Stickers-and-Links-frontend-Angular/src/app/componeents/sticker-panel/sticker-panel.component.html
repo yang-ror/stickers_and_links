@@ -1,0 +1,20 @@
+<div>
+    <div class="stickers" [ngClass]="{
+        'note-color-red' : curColor=='red',
+        'note-color-green' : curColor=='green',
+        'note-color-blue' : curColor=='blue',
+        'note-color-yellow' : curColor=='yellow',
+        'note-color-purple' : curColor=='purple'
+    }">
+        <textarea class="note-input" name="note-input" placeholder="New note" [(ngModel)]="newNote"></textarea>
+        <div class="color-buttons-div">
+            <app-note-color-btn *ngFor="let color of colors" [color]="color" (click)="onSetColor(color)"></app-note-color-btn>
+        </div>
+        <button class="add-note-btn note-color-green apply-shadow" (click)="addNote()">+</button>
+    </div>
+    <app-note-item
+    *ngFor="let note of notes" [note]="note" 
+    (onDeleteNote)="deleteNote(note)"
+    (onSubmitNote)="updateNote($event)"
+    ></app-note-item>
+</div>
